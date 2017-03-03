@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13BE3DEE1AC21097009241FE /* ReactNativeTouchThroughView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BE3DED1AC21097009241FE /* ReactNativeTouchThroughView.m */; };
+		96B4E4571E692D0D003E59C3 /* R2RTouchThroughWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B4E4561E692D0D003E59C3 /* R2RTouchThroughWrapper.m */; };
+		96B4E45A1E692D19003E59C3 /* R2RTouchThroughWrapperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B4E4591E692D19003E59C3 /* R2RTouchThroughWrapperManager.m */; };
+		96B4E45D1E692D22003E59C3 /* R2RTouchThroughView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B4E45C1E692D22003E59C3 /* R2RTouchThroughView.m */; };
+		96B4E4601E692D30003E59C3 /* R2RTouchThroughViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B4E45F1E692D30003E59C3 /* R2RTouchThroughViewManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,8 +27,14 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libReactNativeTouchThroughView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReactNativeTouchThroughView.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		13BE3DEC1AC21097009241FE /* ReactNativeTouchThroughView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNativeTouchThroughView.h; sourceTree = "<group>"; };
-		13BE3DED1AC21097009241FE /* ReactNativeTouchThroughView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactNativeTouchThroughView.m; sourceTree = "<group>"; };
+		96B4E4551E692D0D003E59C3 /* R2RTouchThroughWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R2RTouchThroughWrapper.h; sourceTree = "<group>"; };
+		96B4E4561E692D0D003E59C3 /* R2RTouchThroughWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R2RTouchThroughWrapper.m; sourceTree = "<group>"; };
+		96B4E4581E692D19003E59C3 /* R2RTouchThroughWrapperManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R2RTouchThroughWrapperManager.h; sourceTree = "<group>"; };
+		96B4E4591E692D19003E59C3 /* R2RTouchThroughWrapperManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R2RTouchThroughWrapperManager.m; sourceTree = "<group>"; };
+		96B4E45B1E692D22003E59C3 /* R2RTouchThroughView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R2RTouchThroughView.h; sourceTree = "<group>"; };
+		96B4E45C1E692D22003E59C3 /* R2RTouchThroughView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R2RTouchThroughView.m; sourceTree = "<group>"; };
+		96B4E45E1E692D30003E59C3 /* R2RTouchThroughViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R2RTouchThroughViewManager.h; sourceTree = "<group>"; };
+		96B4E45F1E692D30003E59C3 /* R2RTouchThroughViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R2RTouchThroughViewManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +59,14 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				13BE3DEC1AC21097009241FE /* ReactNativeTouchThroughView.h */,
-				13BE3DED1AC21097009241FE /* ReactNativeTouchThroughView.m */,
+				96B4E4551E692D0D003E59C3 /* R2RTouchThroughWrapper.h */,
+				96B4E4561E692D0D003E59C3 /* R2RTouchThroughWrapper.m */,
+				96B4E4581E692D19003E59C3 /* R2RTouchThroughWrapperManager.h */,
+				96B4E4591E692D19003E59C3 /* R2RTouchThroughWrapperManager.m */,
+				96B4E45B1E692D22003E59C3 /* R2RTouchThroughView.h */,
+				96B4E45C1E692D22003E59C3 /* R2RTouchThroughView.m */,
+				96B4E45E1E692D30003E59C3 /* R2RTouchThroughViewManager.h */,
+				96B4E45F1E692D30003E59C3 /* R2RTouchThroughViewManager.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,7 +127,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13BE3DEE1AC21097009241FE /* ReactNativeTouchThroughView.m in Sources */,
+				96B4E45D1E692D22003E59C3 /* R2RTouchThroughView.m in Sources */,
+				96B4E45A1E692D19003E59C3 /* R2RTouchThroughWrapperManager.m in Sources */,
+				96B4E4571E692D0D003E59C3 /* R2RTouchThroughWrapper.m in Sources */,
+				96B4E4601E692D30003E59C3 /* R2RTouchThroughViewManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
