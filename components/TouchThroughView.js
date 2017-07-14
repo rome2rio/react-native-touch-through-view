@@ -12,10 +12,14 @@
 import React, {Component, PropTypes} from 'react';
 import {View, requireNativeComponent} from 'react-native';
 
-export default class TouchThroughView extends View {
+export default class TouchThroughView extends Component {
   render() {
     return <R2RTouchThroughView {...this.props} />;
   }
 };
 
-const R2RTouchThroughView = requireNativeComponent('R2RTouchThroughView', TouchThroughView, {});
+TouchThroughView.propTypes = {
+  ...View.propTypes,
+};
+
+const R2RTouchThroughView = requireNativeComponent('R2RTouchThroughView', TouchThroughView);
