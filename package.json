@@ -1,7 +1,7 @@
 {
   "name": "react-native-touch-through-view",
   "version": "0.1.3",
-  "description": "",
+  "description": "React Native Touch Through View is a simple component library that allows for scroll views and table views to scroll over interactable content without poor performing size and bounds animations.",
   "repository": {
     "type": "git",
     "url": "https://github.com/rome2rio/react-native-touch-through-view.git"
