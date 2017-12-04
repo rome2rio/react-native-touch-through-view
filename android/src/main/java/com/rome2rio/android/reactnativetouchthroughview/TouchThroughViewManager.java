@@ -1,10 +1,10 @@
 package com.rome2rio.android.reactnativetouchthroughview;
 
-import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
+import com.facebook.react.uimanager.ViewGroupManager;
 
 public class TouchThroughViewManager
-        extends SimpleViewManager<TouchThroughView> {
+        extends ViewGroupManager<TouchThroughView> {
 
     public static final String REACT_CLASS = "R2RTouchThroughView";
 
