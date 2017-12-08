@@ -7,8 +7,9 @@
     "url": "https://github.com/rome2rio/react-native-touch-through-view.git"
   },
   "peerDependencies": {
+    "prop-types": "^15.5.10",
     "react": ">=15.4.0",
-    "react-native": ">=0.40"
+    "react-native": ">=0.47"
   },
   "keywords": [
     "react-native",
