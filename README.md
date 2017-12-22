@@ -42,5 +42,8 @@ eg.
 
 Have a look at the demo in the example directory if you need more help.
 
+## Issues
+Currently we are working through an issue at #8 with Android devices on that latest version of React Native not properly passing through touch events. 
+
 ## Credits
 Brought to you by the team at [Rome2rio](https://www.rome2rio.com). Find out how to join our team at <https://www.rome2rio.com/careers/>
