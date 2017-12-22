@@ -42,8 +42,43 @@ eg.
 
 Have a look at the demo in the example directory if you need more help.
 
-## Issues
-Currently we are working through an issue at #8 with Android devices on that latest version of React Native not properly passing through touch events. 
+## Android Installation
+For Android you have to do the normal react-native link. Also you have to change MainActivity inside you project. See example below
+
+```java
+package com.reactnativetouchthroughviewexample;
+
+import com.facebook.react.ReactActivity;
+import android.view.MotionEvent;
+import com.rome2rio.android.reactnativetouchthroughview.TouchThroughTouchHandlerInterface; 
+import com.rome2rio.android.reactnativetouchthroughview.TouchThroughTouchHandler; 
+
+public class MainActivity extends ReactActivity implements TouchThroughTouchHandlerInterface { 
+
+    private TouchThroughTouchHandler touchThroughTouchHandler = new TouchThroughTouchHandler();
+
+    /**
+     * Returns the name of the main component registered from JavaScript.
+     * This is used to schedule rendering of the component.
+     */
+    @Override
+    protected String getMainComponentName() {
+        return "reactnativetouchthroughviewexample";
+    }
+
+    public TouchThroughTouchHandler getTouchThroughTouchHandler() {
+        return touchThroughTouchHandler;
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        touchThroughTouchHandler.handleTouchEvent(ev);
+
+        return super.dispatchTouchEvent(ev);
+    }
+}
+
+```
 
 ## Credits
 Brought to you by the team at [Rome2rio](https://www.rome2rio.com). Find out how to join our team at <https://www.rome2rio.com/careers/>
