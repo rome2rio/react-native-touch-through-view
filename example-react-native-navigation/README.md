@@ -6,7 +6,7 @@ It shows how to implement react-native-navigation for android
 
 ## Javascript
 
-An example for the javascript part is unter the "Push" section and in the file: src/screens/types/Push.js
+An example for the javascript part is under the "Push" section and in the file: src/screens/types/Push.js
 
 ## Android
 
