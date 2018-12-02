@@ -35,8 +35,6 @@ public class TouchThroughWrapper extends ReactViewGroup implements ReactHitSlopV
                 @Override
                 void handleTouch(MotionEvent ev) {
                     if (ev.getAction() == MotionEvent.ACTION_DOWN) {
-                        int y = (int) ev.getY();
-                        System.out.println("" + y);
                         lastTouchWasNotValid = isTouchingTouchThroughView(viewGroup, (int) ev.getX(), (int) ev.getY());
                     }
                 }
