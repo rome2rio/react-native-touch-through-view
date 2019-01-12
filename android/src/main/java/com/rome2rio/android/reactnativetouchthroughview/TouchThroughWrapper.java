@@ -26,7 +26,15 @@ public class TouchThroughWrapper extends ReactViewGroup implements ReactHitSlopV
     }
 
     private void setActivityListener(ReactContext context) {
+        if (context == null) {
+            return;
+        }
+
         Activity activity = context.getCurrentActivity();
+        if (activity == null) {
+            return;
+        }
+
         final ViewGroup viewGroup = this;
 
         if (activity instanceof TouchThroughTouchHandlerInterface) {
