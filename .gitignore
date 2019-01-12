@@ -25,3 +25,4 @@ project.xcworkspace
 .gradle
 local.properties
 android/build
+**/.DS_Store
