@@ -65,9 +65,7 @@ public class TouchThroughWrapper extends ReactViewGroup implements ReactHitSlopV
 
             if (isTouchThroughView) {
                 Rect bounds = new Rect();
-                child.getGlobalVisibleRect(bounds);
-
-                isTouchingTouchThroughView = bounds.contains(x, y);
+                isTouchingTouchThroughView = child.getGlobalVisibleRect(bounds) && bounds.contains(x, y);
                 /*
                 int[] location = new int[2];
                 int[] thisLocation = new int[2];
