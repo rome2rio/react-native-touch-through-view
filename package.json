@@ -1,7 +1,7 @@
 {
   "name": "react-native-touch-through-view",
-  "version": "0.1.4",
-  "description": "",
+  "version": "1.2.0",
+  "description": "TouchThroughView",
   "repository": {
     "type": "git",
     "url": "https://github.com/rome2rio/react-native-touch-through-view.git"
@@ -22,5 +22,5 @@
   "bugs": {
     "url": "https://github.com/rome2rio/react-native-touch-through-view/issues"
   },
-  "homepage": "https://github.com/rome2rio/react-native-button"
+  "homepage": "https://github.com/rome2rio/react-native-touch-through-view"
 }
