@@ -13,8 +13,16 @@ public class TouchThroughWrapperManager
     public String getName() {
         return REACT_CLASS;
     }
+
     @Override
     public TouchThroughWrapper createViewInstance(ThemedReactContext context) {
-      return new TouchThroughWrapper(context);
+        TouchThroughWrapper view = new TouchThroughWrapper(context);
+        view.addActivityListener();
+        return view;
+    }
+
+    @Override
+    public void onDropViewInstance(TouchThroughWrapper view) {
+        view.removeActivityListener();
     }
 }
