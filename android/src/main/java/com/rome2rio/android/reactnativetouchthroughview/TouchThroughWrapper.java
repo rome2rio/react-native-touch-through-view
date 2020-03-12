@@ -14,10 +14,18 @@ import android.view.ViewGroup;
 
 public class TouchThroughWrapper extends ReactViewGroup implements ReactHitSlopView {
     private boolean lastTouchWasNotValid = false;
+    private final ViewGroup viewGroup = this;
+    private TouchThroughTouchHandler handler;
 
     public TouchThroughWrapper(ReactContext context) {
         super(context);
-        this.setActivityListener(context);
+        Activity activity = context.getCurrentActivity();
+        if (activity instanceof TouchThroughTouchHandlerInterface) {
+            TouchThroughTouchHandlerInterface handlerInterface = (TouchThroughTouchHandlerInterface) activity;
+            handler = handlerInterface.getTouchThroughTouchHandler();
+        } else {
+            throw new RuntimeException("TouchThroughTouchHandlerInterface was not set on app activity");
+        }
     }
 
     @Override
@@ -25,31 +33,20 @@ public class TouchThroughWrapper extends ReactViewGroup implements ReactHitSlopV
         return lastTouchWasNotValid;
     }
 
-    private void setActivityListener(ReactContext context) {
-        if (context == null) {
-            return;
+    private TouchThroughTouchHandlerListener listener = new TouchThroughTouchHandlerListener() {
+        @Override
+        void handleTouch(MotionEvent ev) {
+            if (ev.getAction() == MotionEvent.ACTION_DOWN) {
+                lastTouchWasNotValid = isTouchingTouchThroughView(viewGroup, (int) ev.getX(), (int) ev.getY());
+            }
         }
+    };
+    public void addActivityListener() {
+        handler.addListener(listener);
+    }
 
-        Activity activity = context.getCurrentActivity();
-        if (activity == null) {
-            return;
-        }
-
-        final ViewGroup viewGroup = this;
-
-        if (activity instanceof TouchThroughTouchHandlerInterface) {
-            TouchThroughTouchHandlerInterface handlerInterface = (TouchThroughTouchHandlerInterface) activity;
-            handlerInterface.getTouchThroughTouchHandler().setListener(new TouchThroughTouchHandlerListener() {
-                @Override
-                void handleTouch(MotionEvent ev) {
-                    if (ev.getAction() == MotionEvent.ACTION_DOWN) {
-                        lastTouchWasNotValid = isTouchingTouchThroughView(viewGroup, (int) ev.getX(), (int) ev.getY());
-                    }
-                }
-            });
-        } else {
-            throw new RuntimeException("TouchThroughTouchHandlerInterface was not set on app activity");
-        }
+    public void removeActivityListener() {
+        handler.removeListener(listener);
     }
 
     // Recursively find out if an absolute x/y position is hitting a child view and stop event
