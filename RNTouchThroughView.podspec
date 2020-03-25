@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license          = package["license"]
   s.homepage         = 'n/a'
   s.authors          = { package["author"] => package["repository"]["url"] }
-  s.source           = { :git => package["author"] }
+  s.source           = { :git => package["repository"]["url"] }
   s.source_files     = ['ios/*.{h,m}']
   s.platform         = :ios, "8.0"
   s.dependency          'React'
