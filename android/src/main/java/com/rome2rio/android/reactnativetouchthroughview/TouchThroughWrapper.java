@@ -48,11 +48,15 @@ public class TouchThroughWrapper extends ReactViewGroup implements ReactHitSlopV
         }
     };
     public void addActivityListener() {
-        handler.addListener(listener);
+        if(handler != null) {
+            handler.addListener(listener);
+        }
     }
 
     public void removeActivityListener() {
-        handler.removeListener(listener);
+        if(handler != null) {
+            handler.removeListener(listener);
+        }
     }
 
     // Recursively find out if an absolute x/y position is hitting a child view and stop event
